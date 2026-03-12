@@ -1,6 +1,20 @@
 # CHANGELOG
 
 
+## v0.3.0 (2026-03-12)
+
+### Features
+
+- Lazy Memory init + Glama submission packaging
+  ([`c6f2b76`](https://github.com/elvismdev/mem0-mcp-selfhosted/commit/c6f2b76aa7fc1f243c86fbcd941825ef7861b539))
+
+Defer Memory.from_config() to the first tool call via _ensure_memory(), allowing the MCP server to
+  respond to initialize/tools/list without live Qdrant/Neo4j/Ollama. This unblocks Glama's
+  Docker-based inspection pipeline which builds and runs the container in an ephemeral sandbox.
+
+Add LICENSE (MIT), glama.json, Dockerfile, and Glama badge in README.
+
+
 ## v0.2.1 (2026-02-28)
 
 ### Bug Fixes
